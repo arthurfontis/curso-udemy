@@ -1,5 +1,5 @@
 const imprimirResultado = function (nota) {
-    switch (Math.floor(nota)) {
+    switch (Math.ceil(nota)) {
         case 10: // pode deixar esse vazio, pois é a mesma coisa do caso 9
         case 9:
             console.log('Quadro de Honra')
@@ -23,3 +23,31 @@ imprimirResultado(6.55)
 imprimirResultado(2.3)
 imprimirResultado(-1)
 imprimirResultado(11)
+
+
+//teste que fiz para ver se eu tinha aprendido 
+
+const estadoCivil = function (estados){
+    switch (estados){
+        case 'solteiro':
+            console.log('Você é solteiro')
+            break
+        case 'casado':
+            console.log('Você é casado')
+            break
+        case 'divorciado':
+            console.log('Você é divorciado')
+            break
+        case 'viuvo':
+            console.log('Você é viúvo')
+            break
+            default:
+                console.log('Este estado civil não existe')
+    }
+
+}
+estadoCivil('solteiro')
+estadoCivil('casado')
+estadoCivil('divorciado')
+estadoCivil('viuvo')
+estadoCivil('doido')
