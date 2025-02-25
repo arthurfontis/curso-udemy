@@ -1,4 +1,5 @@
 //01
+console.log('-------------------------')
 function operacoes(x, y) {
     const soma = x + y
     const subt = x - y
@@ -14,6 +15,7 @@ function operacoes(x, y) {
 console.log(operacoes(10, 5))
 
 //02
+console.log('-------------------------')
 function triangulo(a, b, c) {
     if (a === b && b === c) {
         console.log('Este triângulo é equilátero')
@@ -32,6 +34,7 @@ triangulo(3, 5, 5)
 triangulo(3, 4, 5)
 
 //03
+console.log('-------------------------')
 function potencia(base, expo) {
     return Math.pow(base, expo)
 
@@ -39,6 +42,7 @@ function potencia(base, expo) {
 console.log(potencia(5, 3))
 
 //04
+console.log('-------------------------')
 function div(dividendo, divisor) {
     const result = Math.floor(dividendo / divisor)
     const rest = Math.floor(dividendo % divisor)
@@ -48,6 +52,7 @@ function div(dividendo, divisor) {
 console.log(div(120, 9))
 
 //05
+console.log('-------------------------')
 function cash(x, y) {
     const somaCents = (x + y)
     return `R$ ${somaCents.toFixed(2)}`
@@ -55,6 +60,7 @@ function cash(x, y) {
 console.log(cash(0.1, 0.2))
 
 //06
+console.log('-------------------------')
 function montante(inicial, taxaJ, temp) {
     const simple = inicial + (inicial * taxaJ * temp)
     return `R$ ${simple.toFixed(2)}`
@@ -68,6 +74,7 @@ function composto(ini, tax, tempo) {
 console.log(composto(1000, 0.05, 12))
 
 //07
+console.log('-------------------------')
 function bhaskara(ax2, bx, c) {
     let delta = bx ** 2 - 4 * ax2 * c
     if (delta < 0) {
@@ -84,10 +91,11 @@ console.log(bhaskara(4, 3, 2))
 console.log(bhaskara(4, 12, 6))
 
 //08
+console.log('-------------------------')
 let stringPontuacoes = "30, 40, 20, 4, 51, 25, 42, 38, 56, 0"
- 
- 
-function avaliaPontuacoes (stringPontuacoes) {
+
+
+function avaliaPontuacoes(stringPontuacoes) {
     let pontuacoes = stringPontuacoes.split(", ")
     let qtdQuebraDeRecords = 0
     let piorJogo = 1
@@ -95,16 +103,55 @@ function avaliaPontuacoes (stringPontuacoes) {
     let menorPontuacao = pontuacoes[0]
 
     for (let i = 1; i < pontuacoes.length; i++) {
-        if(parseInt(pontuacoes[i]) > parseInt(maiorPontuacao)) {
+        if (parseInt(pontuacoes[i]) > parseInt(maiorPontuacao)) {
             maiorPontuacao = pontuacoes[i]
             qtdQuebraDeRecords++
-        }else if (parseInt(pontuacoes[i]) < parseInt(menorPontuacao)) {
+        } else if (parseInt(pontuacoes[i]) < parseInt(menorPontuacao)) {
             menorPontuacao = pontuacoes[i]
-            piorJogo = i+1;
+            piorJogo = i + 1;
         }
     }
     return [qtdQuebraDeRecords, piorJogo]
 }
- 
+
 console.log(avaliaPontuacoes(stringPontuacoes))
 
+//09
+console.log('-------------------------')
+function escola(nota) {
+    let notaCorrigida = arredondar(nota)
+    if (notaCorrigida >= 40) {
+        console.log(`Aprovado com a nota: ${notaCorrigida}`)
+    }
+    else {
+        console.log(`Reprovado com a nota: ${notaCorrigida}`)
+    }
+}
+function arredondar(nota) {
+    if (nota % 5 > 2) {
+        return nota + (5 - (nota % 5))
+    }
+    else {
+        return nota
+    }
+
+}
+escola(20)
+escola(37)
+escola(38)
+escola(45)
+escola(88)
+escola(93)
+
+//10
+console.log('-------------------------')
+function numberInt(numero) {
+    let verificar = numero % 3
+    if (verificar === 0) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(numberInt(60))
+console.log(numberInt(23))
