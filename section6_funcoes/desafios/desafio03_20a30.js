@@ -81,16 +81,16 @@ console.log(sacarDinheiro(153));
 
 //21
 console.log('-------------------------')
-function planoSaude(idade){
-    if(idade < 10){
+function planoSaude(idade) {
+    if (idade < 10) {
         console.log('RS' + 180)
-    } else if(idade >= 10 && idade <= 30){
+    } else if (idade >= 10 && idade <= 30) {
         console.log('R$' + 150)
-    } else if(idade > 30 && idade <= 60){
+    } else if (idade > 30 && idade <= 60) {
         console.log('R$' + 195)
-    } else if(idade > 60 && idade <= 115){
+    } else if (idade > 60 && idade <= 115) {
         console.log('R$' + 230)
-    } else{
+    } else {
         console.log('Idade inválida')
     }
 
@@ -104,10 +104,10 @@ planoSaude(120)
 
 //22
 console.log('-------------------------')
-function calcularValor(mes, valor){
-    if(mes > 0 && mes < 13) {
+function calcularValor(mes, valor) {
+    if (mes > 0 && mes < 13) {
         atraso = mes - 1
-        return (valor * ((1 + (5/100))**atraso)).toFixed(2)
+        return (valor * ((1 + (5 / 100)) ** atraso)).toFixed(2)
     } else {
         return 'Mês inválido.'
     }
@@ -117,14 +117,14 @@ console.log(calcularValor(4, 100))
 
 //23
 console.log('-------------------------')
-function media(codigo,n1,n2,n3){
+function media(codigo, n1, n2, n3) {
     let notas = []
     notas.push(n1)
     notas.push(n2)
     notas.push(n3)
-    notas.sort((a,b) => a < b ? 1 : -1)
+    notas.sort((a, b) => a < b ? 1 : -1)
 
-    let mediaFinal = (notas[0] * 4 + notas[1] * 3 + notas[2] * 3)/10
+    let mediaFinal = (notas[0] * 4 + notas[1] * 3 + notas[2] * 3) / 10
     console.log(`Código do Aluno: ${codigo}. Notas: ${n1}, ${n2}, ${n3}. ${mediaFinal < 5 ? 'Reprovado.' : 'Aprovado.'}`)
 
 }
@@ -132,20 +132,20 @@ media(123, 2.8, 6, 3.5)
 
 //24
 console.log('-------------------------')
-function helloWorld () {
+function helloWorld() {
     let i = 0
-     while (i < 11) {
-         console.log("Hello World");
-         i++
-     }   
- }
- 
- helloWorld()
+    while (i < 11) {
+        console.log("Hello World");
+        i++
+    }
+}
 
- //25
- console.log('-------------------------')
- function contador () {
-    for (let i = 1; i<=50; i++) {
+helloWorld()
+
+//25
+console.log('-------------------------')
+function contador() {
+    for (let i = 1; i <= 50; i++) {
         console.log(i);
     }
 }
@@ -153,9 +153,9 @@ contador()
 
 //26
 console.log('-------------------------')
-function pares(){
-    for(let i = 1; i <= 100; i++){ // etapas: 1. declaração da var, 2. condição, 3. incremento
-        if(i % 2 === 0){
+function pares() {
+    for (let i = 1; i <= 100; i++) { // etapas: 1. declaração da var, 2. condição, 3. incremento
+        if (i % 2 === 0) {
             console.log(i)
         }
     }
@@ -165,32 +165,32 @@ pares()
 //27
 console.log('-------------------------')
 function criancas(altura1, taxa1, altura2, taxa2) {
-    if(altura1 == altura2){
+    if (altura1 == altura2) {
         if (taxa1 > taxa2) {
             return 'A criança 1 ultrapassará a criança 2 em 1 ano.'
-        } else if(taxa1 < taxa2) {
+        } else if (taxa1 < taxa2) {
             return 'A criança 2 ultrapassará a criança 1 em 1 ano.'
-        }else{
+        } else {
             return 'As crianças tem igual altura e crescimento.'
         }
     } else {
         if (altura1 > altura2) {
-            if(taxa1 >= taxa2){
+            if (taxa1 >= taxa2) {
                 return 'A criança menor não ultrapassará a maior.'
-            }else{
-               return `A criança menor ultrapassará a maior em ${calcularTempo(altura2, taxa2, altura1, taxa1)} anos` 
+            } else {
+                return `A criança menor ultrapassará a maior em ${calcularTempo(altura2, taxa2, altura1, taxa1)} anos`
             }
         } else {
-            if(taxa2 >= taxa1){
+            if (taxa2 >= taxa1) {
                 return 'A criança menor não ultrapassará a maior.'
-            }else{
-               return `A criança menor ultrapassará a maior em ${calcularTempo(altura1, taxa1, altura2, taxa2)} anos` 
+            } else {
+                return `A criança menor ultrapassará a maior em ${calcularTempo(altura1, taxa1, altura2, taxa2)} anos`
             }
         }
     }
 }
 
-function calcularTempo(alturaMenor, taxaAlturaMenor, alturaMaior, taxaAlturaMaior){
+function calcularTempo(alturaMenor, taxaAlturaMenor, alturaMaior, taxaAlturaMaior) {
     let qtdAnos = 0
     while (alturaMenor < alturaMaior) {
         alturaMenor += taxaAlturaMenor
@@ -224,16 +224,40 @@ paresImpares(vetor)
 
 //29
 console.log('-------------------------')
-function intervalo (vetor) {
+function intervalo(vetor) {
     qtdNumerosNoIntervalo = 0
     for (let i = 0; i < vetor.length; i++) {
-        if(vetor[i] >= 10 && vetor[i] <= 20){
+        if (vetor[i] >= 10 && vetor[i] <= 20) {
             qtdNumerosNoIntervalo++
         }
     }
     return `${qtdNumerosNoIntervalo} números dentro do intervalo.`
 }
 
-vetor = [ 7, 8, 9, 10, 11, 12, 16, 17, 18, 19, 20, 21]
+vetor = [7, 8, 9, 10, 11, 12, 16, 17, 18, 19, 20, 21]
 
 console.log(intervalo(vetor))
+
+//30
+console.log('-------------------------')
+function inter(vet) {
+    let menor
+    let maior
+    for (let i = 0; i < vet.length; i++) {
+        if (maior === undefined && menor === undefined) {
+            maior = vet[i]
+            menor = vet[i]
+        } else {
+            if (vet[i] > maior) {
+                maior = vet[i]
+            }
+            if (vet[i] < menor) {
+                menor = vet[i]
+            }
+        }
+    }
+    return [menor, maior]
+}
+vet = [10, 5, 7, 3, 1, 3, 11, 20, 6, 9]
+
+console.log(inter(vet))
