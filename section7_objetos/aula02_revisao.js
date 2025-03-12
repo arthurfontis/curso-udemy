@@ -18,20 +18,20 @@ const carro = {
         endereco: {
             logradouro: 'Rua ABC',
             numero: 123
-            }
-        },
-        condutores: [{
-            nome: 'Junior',
-            idade: 19
-        }, {
-            nome: 'Ana',
-            idade: 32
-        }],
-
-        calcularValorSeguro: function () {
-            //...
         }
+    },
+    condutores: [{
+        nome: 'Junior',
+        idade: 19
+    }, {
+        nome: 'Ana',
+        idade: 32
+    }],
+
+    calcularValorSeguro: function () {
+        //...
     }
+}
 
 
 carro.proprietario.endereco.numero = 1000

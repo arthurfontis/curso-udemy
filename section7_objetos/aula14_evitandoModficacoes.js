@@ -10,7 +10,7 @@ delete produto.tag
 console.log(produto)
 
 //Object.seal
-const pessoa = {nome: 'Juliana' , idade: 35}
+const pessoa = { nome: 'Juliana', idade: 35 }
 Object.seal(pessoa) //não consegue add, nem excluir, mas pode modificar ainda
 console.log('Selado: ', Object.isSealed(pessoa))
 

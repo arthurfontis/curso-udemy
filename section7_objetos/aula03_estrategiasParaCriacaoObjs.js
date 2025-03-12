@@ -9,25 +9,25 @@ const obj2 = new Object
 console.log(obj2)
 
 //funções construtoras
-function Produto(nome, preco, desc){
+function Produto(nome, preco, desc) {
     this.nome = nome // this é público, escopo livre
-    this.getPrecoComDesconto = () =>{
+    this.getPrecoComDesconto = () => {
         return preco * (1 - desc)
     }
 }
 
-const p1 = new Produto ('Caneta' , 7.99, 0.15)
-const p2 = new Produto ('Notebook', 2998.99, 0.25)
+const p1 = new Produto('Caneta', 7.99, 0.15)
+const p2 = new Produto('Notebook', 2998.99, 0.25)
 
-console.log(p1.getPrecoComDesconto(),'e', p2.getPrecoComDesconto())
+console.log(p1.getPrecoComDesconto(), 'e', p2.getPrecoComDesconto())
 
 //função factory
-function criarFuncionario(nome, salarioBase, faltas){
+function criarFuncionario(nome, salarioBase, faltas) {
     return {
         nome,
         salarioBase,
         faltas,
-        getSalario(){
+        getSalario() {
             return (salarioBase / 30) * (30 - faltas)
         }
     }

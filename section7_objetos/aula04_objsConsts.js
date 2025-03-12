@@ -1,7 +1,7 @@
 //pessoa -> endereço de memória -> {obj criado} 
 
-const pessoa = {nome: 'joão'}
-pessoa.nome ='Pedro' //atribuido n para pessoa, mas para pessoa.nome
+const pessoa = { nome: 'joão' }
+pessoa.nome = 'Pedro' //atribuido n para pessoa, mas para pessoa.nome
 console.log(pessoa)
 
 // pessoa -> 456 ->{}
@@ -14,6 +14,6 @@ delete pessoa.nome
 console.log(pessoa.nome)
 console.log(pessoa)
 
-const pessoaConstante = Object.freeze({nome:"João"})
+const pessoaConstante = Object.freeze({ nome: "João" })
 pessoaConstante.nome = 'Ana'
 console.log(pessoaConstante)

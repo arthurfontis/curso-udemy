@@ -7,7 +7,7 @@ console.log(obj1.__proto__ === obj2.__proto__)
 console.log(MeuObj.prototype === obj1.__proto__)
 
 MeuObj.prototype.nome = 'Anônimo'
-MeuObj.prototype.falar = function(){
+MeuObj.prototype.falar = function () {
     console.log("Bom dia meu nome é " + this.nome)
 }
 
