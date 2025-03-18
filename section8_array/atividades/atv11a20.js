@@ -113,11 +113,11 @@ console.log(mediaSimples([2,4,2,4]))
 //20
 console.log('----------------')
 function calcularAreaTriangulo(base,altura){
-    const area = base * altura
+    const area = (base * altura) /2
     return console.log(area.toFixed(2))
 }
 
 calcularAreaTriangulo(5,2)
-calcularAreaTriangulo(9,4)
+calcularAreaTriangulo(6.2,4)
 calcularAreaTriangulo(7,8)
 
