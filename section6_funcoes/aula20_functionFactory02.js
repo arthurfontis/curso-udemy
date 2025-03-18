@@ -8,3 +8,7 @@ function criarProduto(nome, preco){
 console.log(criarProduto('Bola', 6.2))
 console.log(criarProduto('Celular', 2400.90))
 console.log(criarProduto('Ipad', 1199.49))
+
+const aleat = criarProduto('Minecraft' , 29.99)
+
+console.log(aleat)
