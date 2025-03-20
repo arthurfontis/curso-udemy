@@ -1,0 +1,14 @@
+{
+  "name": "aula05_funcionarios",
+  "version": "1.0.0",
+  "description": "detalhes",
+  "main": "outro.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arthur Fontis",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.8.4"
+  }
+}
