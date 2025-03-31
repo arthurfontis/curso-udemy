@@ -18,3 +18,5 @@ resultado = nums.map(soma10).map(triplo).map(paraDinheiro)
 console.log(resultado)
 
 
+const negativo =  e => console.log(-e)
+nums.map(negativo)

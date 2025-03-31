@@ -14,3 +14,4 @@ const fragil = produto => produto.fragil
 
 console.log(produtos.filter(caro).filter(fragil))
 
+
