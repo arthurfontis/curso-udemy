@@ -69,16 +69,16 @@
         const novoInicio = inicio - passo;
         if (novoInicio >= fim) {
             elem.style.left = novoInicio + 'px';
-            setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 9);
+            setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 7);
         } else {
             callback();
         }
     }
 
     function slider() {
-        const slides = document.querySelectorAll('[wm-slider] > p');
-        const slid = Array.from(slides);
-        exibirSlide(slid, slid[0]);
+        const elementos = document.querySelectorAll('[wm-slider] > p');
+        const slide = Array.from(elementos);
+        exibirSlide(slide, slide[0]);
     }
 
     function exibirSlide(slides, slide) {
@@ -88,7 +88,7 @@
         const fim = -slide.clientWidth;
         slide.style.left = `${inicio}px`;
 
-        mover(slide, inicio, fim, 7, () => {
+        mover(slide, inicio, fim, 4, () => {
             slide.style.display = 'none';
             exibirSlide(slides, getProximo(slides, slide));
         });
