@@ -13,42 +13,46 @@
     <div id='conteudo'></div>
 
     <script>
-        const pessoas = [
-            { nome: 'Ana', nota: 9.1 },
-            { nome: 'Bianca', nota: 8.4 },
-            { nome: 'Carlos', nota: 7.6 },
-            { nome: 'Julia', nota: 9.7 }
-        ]
+        //$(document).ready(function () {
 
-        const css = {
-            'border': '1px solid white',
-            'padding': '10px',
-            'border-collapse': 'collapse'
-        }
+        $(function () {
+            const pessoas = [
+                { nome: 'Ana', nota: 9.1 },
+                { nome: 'Bianca', nota: 8.4 },
+                { nome: 'Carlos', nota: 7.6 },
+                { nome: 'Julia', nota: 9.7 }
+            ]
 
-        const table = $('<table>')
-        const cabecalho = $('<tr>')
+            const css = {
+                'border': '1px solid white',
+                'padding': '10px',
+                'border-collapse': 'collapse'
+            }
 
-        const thNome = $('<th>').text('Nome').css(css);
-        const thNota = $('<th>').text('Nota').css(css);
+            const table = $('<table>')
+            const cabecalho = $('<tr>')
 
-        cabecalho.append(thNome)
-        cabecalho.append(thNota)
+            const thNome = $('<th>').text('Nome').css(css);
+            const thNota = $('<th>').text('Nota').css(css);
 
-        table.css('border-collapse', 'collapse')
+            cabecalho.append(thNome)
+            cabecalho.append(thNota)
 
-        pessoas.forEach(pessoa =>{
-            const linha = $('<tr>')
-            const tdNome = $('<td>').text(pessoa.nome).css(css)
-            const tdNota = $('<td>').text(pessoa.nota).css(css)
-            
-            linha.append(tdNome)
-            linha.append(tdNota)
-            
-            table.append(linha)
+            table.css('border-collapse', 'collapse')
+
+            pessoas.forEach(pessoa => {
+                const linha = $('<tr>')
+                const tdNome = $('<td>').html(pessoa.nome).css(css)
+                const tdNota = $('<td>').html(pessoa.nota).css(css)
+
+                linha.append(tdNome)
+                linha.append(tdNota)
+
+                table.append(linha)
+            })
+            table.prepend(cabecalho)
+            $('#conteudo').append(table)
+
         })
-        table.prepend(cabecalho)
-
-        $('#conteudo').append(table)
     </script>
 </body>
