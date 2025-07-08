@@ -1,13 +1,14 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "John Doe",
-            "email": "johndoe@cod3r.com.br"
-        } ,{
-            "id": 2,
-            "name": "Jane Smith",
-            "email": "janesmith@cod3r.com.br"
-        }
-    ]
+  "users": [
+    {
+      "id": "3422",
+      "name": "Arthur Carvalho Fontinele",
+      "email": "arthurfontis17@gmail.com"
+    },
+    {
+      "id": "2820",
+      "name": "leleo",
+      "email": "leleo@gmail.com"
+    }
+  ]
 }
