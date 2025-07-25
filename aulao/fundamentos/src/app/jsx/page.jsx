@@ -1,3 +1,4 @@
+import Layout from '../../components/Layout'
 import '../../styles/app.css'
 
 export default function Jsx() {
@@ -10,12 +11,15 @@ export default function Jsx() {
 
 
     return (
-        <div>
-            {titulo}
-            {subtitulo()}
-            <p>
-                {JSON.stringify({ nome: 'João', idade: 30 })}
-            </p>
-        </div>
+
+        <Layout titule="Entendendo o Jsx">
+            <div>
+                {titulo}
+                {subtitulo()}
+                <p>
+                    {JSON.stringify({ nome: 'João', idade: 30 })}
+                </p>
+            </div>
+        </Layout>
     )
 }
