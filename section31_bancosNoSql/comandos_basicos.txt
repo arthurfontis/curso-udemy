@@ -1,0 +1,29 @@
+show dbs
+
+use "nome do db"
+
+db.createCollection("nome da collection")
+show Collections
+db."nome da collection",drop()
+
+db.estados.insert({ nome: "São Paulo", sigla: "SP", regiao: "Sudeste", cidades: [
+    { nome: "Campinas", area: 795.7, prefeito: "Jonas Donizette", populacao: 1081000, }, 
+    {nome: "Guarulhos", populacao: 1325000}, 
+    {nome: 'Sorocaba', distanciaCapital: 87, populacao: 644919}]})
+
+
+
+
+
+db.estados.aggregate([{$project: {populacao: {$sum: "$cidades.populacao"}, sigla: 1, _id: 0}}])
+
+
+ db.estados.aggregate([
+    {$project: {populacao: {$sum: "$cidades.populacao"}, sigla: 1, _id: 0} }, 
+    {$group: {_id: null, populacaoTotal: {$sum:"$populacao" }} }, 
+    {$project: {_id: 0, populacaoTotal: 1}}])
+
+
+    db.estados.aggregate([ {$match: {"cidades.nome": "Sorocaba"}}, 
+    {$unwind: "$cidades"}, {$match: {"cidades.nome": "Sorocaba"}}, 
+    {$project: {_id: "$cidades._id"} } ])
