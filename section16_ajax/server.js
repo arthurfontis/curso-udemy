@@ -29,7 +29,7 @@ app.post('/upload', (req, res) => {
 })
 
 app.post('/formulario', (req,res) => {
-    res.send({
+    res.json({
         ...req.body,
         id: 1
     })
